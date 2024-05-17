@@ -8,6 +8,9 @@ We created a database in PostgreSQL called ExCompany with a single table employe
 ## Programming
 
 We created functions in each programming language to generate the fake data, using this fake data to insert rows into the database table, read from the data table, update the data table and delete from the data table. We generated 10,000 rows of fake data from which to pull for each insert cycle, randomly sampled 1000 entries from this data and inserted them into the table. We measured the processing time of inserting 1000 entries and repeated this 1000 times and analyzed the processing data. Between each run we truncated the table to remove all the data to give us a reinitialized empty table.
+
 For the read queries, we inserted 10000 entries into the data table and took a random sample of 1000 rows from which to use in our read queries, measuring the time it took to read 1000 rows. We repeated this 1000 times and analyzed the processing data.
+
 For the update queries, we inserted 10000 entries into the data table and took an initial random sample of 1000 rows. We took a second random sample of 1000 rows and updated these rows using the data from the initial random sample. We repeated this process 1000 times and analyzed the processing data.
+
 For the delete queries, we inserted 10000 entries into the data table and took a random sample of 1000 rows. We used each row of the randomly selected data to delete from the table and rolled back our executed delete query to preserve the table size throughout the experiment. We repeated this process 1000 times and analyzed the processing data.
