@@ -10,7 +10,7 @@ library(readxl)
 library(tidyr)
 
 # Set working directory
-setwd("")
+setwd("C:/Users/micha/OneDrive - Northwestern University/MSDS460/Module 7/Assignment_4/")
 
 # Load data from Excel file
 r_data <- read_excel("R_output200.xlsx")
